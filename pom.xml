@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mule.tooling.jubula</groupId>
+	<artifactId>jubula-accessibility-parent</artifactId>
+	<version>3.4.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<organization>
+		<name>MuleSoft Inc.</name>
+		<url>http://www.mulesoft.com/</url>
+	</organization>
+
+	<properties>
+		<tycho.groupid>org.eclipse.tycho</tycho.groupid>
+		<tycho.version>0.16.0</tycho.version>
+		<tycho-extras.groupid>org.eclipse.tycho</tycho-extras.groupid>
+		<tycho-extras.version>0.16.0</tycho-extras.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modules>
+		<module>org.mule.tooling.jubula.accessibility.target</module>
+		<module>org.mule.tooling.jubula.accessibility.gef</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${tycho.groupid}</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>${tycho.groupid}</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+					<target>
+						<artifact>
+							<groupId>org.mule.tooling.jubula</groupId>
+							<artifactId>jubula-accessibility-target</artifactId>
+							<version>${project.version}</version>
+						</artifact>
+					</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>${tycho.groupid}</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>${tycho-extras.groupid}</groupId>
+					<artifactId>target-platform-validation-plugin</artifactId>
+					<version>${tycho-extras.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
