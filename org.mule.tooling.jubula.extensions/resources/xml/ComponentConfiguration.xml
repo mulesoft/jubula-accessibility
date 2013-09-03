@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<compSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentConfiguration.xsd" basicTesterClass="org.eclipse.jubula.rc.swt.implclasses.SimpleExtendedComponentImplClass">
+	<configVersion>
+		<majorVersion>1</majorVersion>
+		<minorVersion>0</minorVersion>
+	</configVersion>
+	<!-- Concrete components -->
+		<toolkitComponent type="org.eclipse.swt.widgets.Control">
+			<realizes>guidancer.abstract.Widget</realizes>
+			<testerClass>org.eclipse.jubula.rc.swt.implclasses.ConfigWindowTabControlImpClass</testerClass>
+			<componentClass name="org.mule.tooling.ui.widgets.tab.TabbedPropertyList" />
+			<action name="Control.selectTab">
+				<method>selectTab</method>
+				<param name="Control.tabName">
+					<type>java.lang.String</type>
+				</param>
+			</action>
+		</toolkitComponent>
+</compSystem>

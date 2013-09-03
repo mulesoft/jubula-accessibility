@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.jubula.toolkit.common.toolkitsupport">
+      <toolkit
+            IToolkitProvider="org.mule.tooling.jubula.extensions.ToolKitProvider1"
+            depends="com.bredexsw.guidancer.RcpToolkitPlugin"
+            includes="null"
+            isUserToolkit="true"
+            level="toolkit"
+            name="Jubula Toolkit Extension"
+            order="21"
+            toolkitID="org.mule.tooling.jubula.extensions.toolkit1">
+      </toolkit>
+   </extension>
+
+</plugin>

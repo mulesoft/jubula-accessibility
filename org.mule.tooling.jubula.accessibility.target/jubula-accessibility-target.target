@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?>
-
-<target name="MuleStudio Accessibility for Jubula" sequenceNumber="22">
+<?pde version="3.8"?><target name="MuleStudio Accessibility for Jubula" sequenceNumber="24">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.mule.tooling.feature.group" version="0.0.0"/>
-<repository location="https://corp.bamboo.mulesource.com/browse/TOOLING-STUDIO38/latestSuccessful/artifact/shared/studio-update-site"/>
+<unit id="org.mule.tooling.ui.widgets" version="0.0.0"/>
+<unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
+<repository location="http://corp.bamboo.mulesource.com/browse/TOOLING-STUDIO38/latestSuccessful/artifact/shared/studio-update-site"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jubula.rc.rcp" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/juno/"/>
+<unit id="org.eclipse.jubula.rc.rcp" version="1.2.2.201209040912"/>
+<unit id="org.eclipse.jubula.toolkit.common" version="1.2.2.201209040912"/>
+<repository location="http://download.eclipse.org/releases/juno/201303010900"/>
 </location>
 </locations>
 </target>

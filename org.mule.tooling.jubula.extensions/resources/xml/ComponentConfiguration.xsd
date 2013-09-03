@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xs:element name="method" type="xs:string"/>
+	<xs:element name="type" type="xs:string"/>
+	<xs:element name="defaultValue" type="xs:string"/>
+
+	<xs:element name="param">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="type" />
+				<xs:element minOccurs="0" ref="defaultValue" />
+				<xs:element minOccurs="0" ref="valueSet" />
+			</xs:sequence>
+			<xs:attribute name="name" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="valueSet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="element" />
+			</xs:sequence>
+			<xs:attribute name="combinable" default="false" use="optional" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="defaultMapping">
+    	<xs:complexType>
+      		<xs:complexContent>
+        		<xs:extension base="typeFactory">
+          			<xs:attribute name="logicalName" use="required" type="xs:ID"/>
+          			<xs:attribute name="technicalName" use="required"/>
+        		</xs:extension>
+      		</xs:complexContent>
+    	</xs:complexType>
+	</xs:element>
+
+	<xs:element name="typeFactory" type="xs:string"/>
+	
+	<xs:element name="element">
+		<xs:complexType>
+			<xs:attribute name="name" use="required" />
+			<xs:attribute name="value" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="postExecutionCommand" type="xs:string" />
+
+	<xs:element name="action">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="method" />
+				<xs:element minOccurs="0" maxOccurs="unbounded"
+					ref="param" />
+				<xs:element minOccurs="0" ref="postExecutionCommand" />
+			</xs:sequence>
+			<xs:attribute name="name" use="required" />
+			<xs:attribute name="clientAction">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="changed" use="required" />
+			<xs:attribute name="deprecated">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="realizes" type="xs:string"/>
+	<xs:element name="extends" type="xs:string"/>
+
+	<xs:complexType name="typeFactory">
+		<xs:sequence>
+			<xs:element ref="typeFactory"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
