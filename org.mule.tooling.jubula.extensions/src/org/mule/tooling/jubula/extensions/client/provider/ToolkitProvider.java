@@ -13,7 +13,7 @@ import org.mule.tooling.jubula.extensions.Activator;
 public class ToolkitProvider implements IToolKitProvider {
 
 	
-	public static final String BUNDLE = "org.mule.tooling.jubula.extensions.client.i18n";
+	public static final String BUNDLE = "org.mule.tooling.jubula.extensions.client.i18n.i18n";
 	
 	@Override
 	public Composite getAutConfigDialog(Composite arg0, int arg1,
