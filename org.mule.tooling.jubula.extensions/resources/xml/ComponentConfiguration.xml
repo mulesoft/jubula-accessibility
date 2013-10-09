@@ -14,8 +14,6 @@
 	<configVersion>
 		<majorVersion>1</majorVersion>
 		<minorVersion>38</minorVersion>
-		<majorCustomVersion>0</majorCustomVersion>
-		<minorCustomVersion>0</minorCustomVersion>
 	</configVersion>
 
 	<toolkitComponent type="org.mule.tooling.ui.widgets.tab.TabbedPropertyList" visible="true">

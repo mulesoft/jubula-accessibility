@@ -18,8 +18,8 @@
 			<xs:sequence>
 				<xs:element ref="majorVersion" />
 				<xs:element ref="minorVersion" />
-				<xs:element ref="majorCustomVersion" />
-				<xs:element ref="minorCustomVersion" />
+				<xs:element ref="majorCustomVersion" minOccurs="0"/>
+				<xs:element ref="minorCustomVersion" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
