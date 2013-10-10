@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:include schemaLocation="CommonComponentConfiguration.xsd" />
+	<xs:element name="compSystem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="configVersion" />
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element ref="abstractComponent" />
+					<xs:element ref="toolkitComponent" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="configVersion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="majorVersion" />
+				<xs:element ref="minorVersion" />
+				<xs:element ref="majorCustomVersion" />
+				<xs:element ref="minorCustomVersion" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="majorVersion" type="xs:string" />
+	<xs:element name="minorVersion" type="xs:string" />
+	<xs:element name="majorCustomVersion" type="xs:string" />
+	<xs:element name="minorCustomVersion" type="xs:string" />
+	<xs:element name="toolkitComponent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="defaultMapping" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="realizes" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="extends" />
+				<xs:element ref="testerClass" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="componentClass" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="action" />
+			</xs:sequence>
+			<xs:attribute name="type" use="required" type="xs:ID" />
+			<xs:attribute name="visible" default="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+						<xs:enumeration value="false" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="observable" default="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+						<xs:enumeration value="false" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="changed" />
+			<xs:attribute name="deprecated">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="abstractComponent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="realizes" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="extends" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="action" />
+			</xs:sequence>
+			<xs:attribute name="type" use="required" type="xs:ID" />
+			<xs:attribute name="visible" default="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+						<xs:enumeration value="false" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="changed" />
+			<xs:attribute name="deprecated">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="true" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="testerClass" type="xs:string" />
+	<xs:element name="componentClass">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="property" />
+			</xs:sequence>
+			<xs:attribute name="name" use="required" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="property">
+		<xs:complexType>
+			<xs:attribute name="name" use="required" type="xs:string" />
+			<xs:attribute name="value" use="required" type="xs:string" />
+		</xs:complexType>
+	</xs:element></xs:schema>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GroupImplClass Fragment
+Bundle-SymbolicName: org.eclipse.jubula.examples.extension.rcp.rc
+Bundle-Version: 3.4.1.qualifier
+Fragment-Host: org.eclipse.jubula.rc.rcp
+Require-Bundle: org.eclipse.ui,
+ org.mule.tooling.ui.widgets
+Export-Package: org.eclipse.jubula.rc.swt.implclasses

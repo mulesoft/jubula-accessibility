@@ -72,8 +72,18 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
-	
+
+	<profiles>
+		<profile>
+			<id>examples</id>
+			<modules>
+				<module>org.eclipse.jubula.examples.extension.rcp.rc</module>
+				<module>org.eclipse.jubula.examples.extension.rcp.toolkit</module>
+				<module>org.eclipse.jubula.examples.extension.rcp.feature</module>
+			</modules>
+		</profile>
+	</profiles>
+
 	<distributionManagement>
 		<repository>
 			<id>mule-ee-releases</id>
