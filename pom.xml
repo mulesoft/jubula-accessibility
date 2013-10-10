@@ -80,6 +80,7 @@
 				<module>org.eclipse.jubula.examples.extension.rcp.rc</module>
 				<module>org.eclipse.jubula.examples.extension.rcp.toolkit</module>
 				<module>org.eclipse.jubula.examples.extension.rcp.feature</module>
+				<module>org.eclipse.jubula.examples.extension.rcp.repository</module>
 			</modules>
 		</profile>
 	</profiles>
