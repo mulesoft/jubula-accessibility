@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/org.eclipse.jubula.examples.extension.rcp.feature_3.4.1.qualifier.jar" id="org.eclipse.jubula.examples.extension.rcp.feature" version="3.4.1.qualifier">
-      <category name="org.eclipse.jubula.examples"/>
-   </feature>
-   <category-def name="org.eclipse.jubula.examples" label="Eclipse Jubula Examples"/>
-</site>
