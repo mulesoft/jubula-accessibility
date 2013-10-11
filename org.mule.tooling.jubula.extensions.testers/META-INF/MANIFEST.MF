@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Jubula Tester Classes
 Bundle-Vendor: MuleSoft Inc.
-Bundle-SymbolicName: org.mule.jubula.extension.rcp.aut
+Bundle-SymbolicName: org.mule.tooling.jubula.extensions.testers
 Bundle-Version: 3.4.1.qualifier
 Fragment-Host: org.eclipse.jubula.rc.rcp
 Require-Bundle: org.eclipse.ui,

@@ -6,11 +6,11 @@
 
 	<parent>
 		<groupId>org.mule.tooling.jubula</groupId>
-		<artifactId>jubula-accessibility-parent</artifactId>
+		<artifactId>jubula-extensions-parent</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>jubula-accessibility-target</artifactId>
+	<artifactId>jubula-extensions-target</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 
 	<build>

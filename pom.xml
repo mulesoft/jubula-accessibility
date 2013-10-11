@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.mule.tooling.jubula</groupId>
-	<artifactId>jubula-accessibility-parent</artifactId>
+	<artifactId>jubula-extensions-parent</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -22,10 +22,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
-		<module>org.mule.tooling.jubula.accessibility.target</module>
+		<module>org.mule.tooling.jubula.extensions.target</module>
+		
 		<module>org.mule.tooling.jubula.accessibility.gef</module>
 
-		<module>org.mule.jubula.extension.rcp.aut</module>
+		<module>org.mule.tooling.jubula.extensions.testers</module>
 		<module>org.mule.tooling.jubula.extensions.toolkit</module>
 		<module>org.mule.tooling.jubula.extensions.feature</module>
 
@@ -50,7 +51,7 @@
 					<target>
 						<artifact>
 							<groupId>org.mule.tooling.jubula</groupId>
-							<artifactId>jubula-accessibility-target</artifactId>
+							<artifactId>jubula-extensions-target</artifactId>
 							<version>${project.version}</version>
 						</artifact>
 					</target>

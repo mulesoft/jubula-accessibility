@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.mule.tooling.jubula</groupId>
-		<artifactId>jubula-accessibility-parent</artifactId>
+		<artifactId>jubula-extensions-parent</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>org.mule.jubula.extension.rcp.aut</artifactId>
+	<artifactId>org.mule.tooling.jubula.extensions.testers</artifactId>
 	<packaging>eclipse-plugin</packaging>
 </project>
