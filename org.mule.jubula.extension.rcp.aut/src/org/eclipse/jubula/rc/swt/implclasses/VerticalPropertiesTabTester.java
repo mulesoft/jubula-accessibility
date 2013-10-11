@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Display;
 import org.mule.tooling.messageflow.dialog.IItem;
 import org.mule.tooling.properties.widget.VerticalPropertiesTabFolder;
 
-public class ConfigWindowTabsControlImplClass extends AbstractControlImplClass {
+public class VerticalPropertiesTabTester extends AbstractControlImplClass {
 
 	public void selectTab(final String tabName) throws StepExecutionException {
 		Display currentDisplay = Display.getCurrent();

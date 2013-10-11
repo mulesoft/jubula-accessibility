@@ -18,7 +18,7 @@
 
 	<toolkitComponent type="org.eclipse.swt.widgets.Composite" visible="true">
 		<realizes>guidancer.abstract.Widget</realizes>
-		<testerClass>org.eclipse.jubula.rc.swt.implclasses.ConfigWindowTabsControlImplClass</testerClass>
+		<testerClass>org.eclipse.jubula.rc.swt.implclasses.VerticalPropertiesTabTester</testerClass>
 		<componentClass name="org.eclipse.swt.widgets.Composite" />
 		<action name="Control.selectTab" changed="0.0">
 			<method>selectTab</method>
