@@ -16,10 +16,10 @@
 		<minorVersion>38</minorVersion>
 	</configVersion>
 
-	<toolkitComponent type="org.mule.tooling.ui.widgets.tab.TabbedPropertyList" visible="true">
+	<toolkitComponent type="org.eclipse.swt.widgets.Composite" visible="true">
 		<realizes>guidancer.abstract.Widget</realizes>
-		<testerClass>org.eclipse.jubula.rc.swt.implclasses.ConfigWindowTabControlImpClass</testerClass>
-		<componentClass name="org.mule.tooling.ui.widgets.tab.TabbedPropertyList" />
+		<testerClass>org.eclipse.jubula.rc.swt.implclasses.ConfigWindowTabsControlImplClass</testerClass>
+		<componentClass name="org.eclipse.swt.widgets.Composite" />
 		<action name="Control.selectTab" changed="0.0">
 			<method>selectTab</method>
 			<param name="Control.tabName">

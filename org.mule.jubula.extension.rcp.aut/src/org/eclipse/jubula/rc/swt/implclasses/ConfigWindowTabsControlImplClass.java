@@ -6,23 +6,35 @@ import java.util.List;
 import org.eclipse.jubula.rc.common.exception.ComponentNotFoundException;
 import org.eclipse.jubula.rc.common.exception.StepExecutionException;
 import org.eclipse.swt.widgets.Control;
-import org.mule.tooling.ui.widgets.tab.TabbedPropertyList;
-import org.mule.tooling.ui.widgets.tab.TabbedPropertyList.ListElement;
+import org.eclipse.swt.widgets.Display;
+import org.mule.tooling.messageflow.dialog.IItem;
+import org.mule.tooling.properties.widget.VerticalPropertiesTabFolder;
 
 public class ConfigWindowTabsControlImplClass extends AbstractControlImplClass {
 
-	public void selectTab(String tabName) throws StepExecutionException {
-		TabbedPropertyList tabbedComponent = (TabbedPropertyList) getComponent();
-		List<ListElement> elements = Arrays.asList(tabbedComponent.getElements());
-		ListElement targetListElement = null;
-		for (ListElement listElement : elements) {
-			if (tabName.equals(listElement.getTabItem().getText())) {
-				targetListElement = listElement;
+	public void selectTab(final String tabName) throws StepExecutionException {
+		Display currentDisplay = Display.getCurrent();
+		Display display = currentDisplay != null ? currentDisplay : Display.getDefault();
+		display.syncExec(new Runnable() {
+
+			@Override
+			public void run() {
+				doSelectTab(tabName);
+			}
+		});
+	}
+
+	private void doSelectTab(String tabName) {
+		List<IItem> items = Arrays.asList(control.getItems());
+		IItem targetItem = null;
+		for (IItem item : items) {
+			if (tabName.equals(item.getText())) {
+				targetItem = item;
 				break;
 			}
 		}
-		if (targetListElement != null) {
-			tabbedComponent.select(elements.indexOf(targetListElement));
+		if (targetItem != null) {
+			control.setSelection(items.indexOf(targetItem));
 		} else {
 			throw new StepExecutionException(new ComponentNotFoundException("Tab with name " + tabName + " not found", null));
 		}
@@ -31,14 +43,14 @@ public class ConfigWindowTabsControlImplClass extends AbstractControlImplClass {
 	// copied from SimpleExtendedComponentImplClass
 
 	/** the tested component */
-	private Control control;
+	private VerticalPropertiesTabFolder control;
 
 	/**
 	 * 
 	 * {@inheritDoc}
 	 */
 	public void setComponent(Object graphicsComponent) {
-		control = (Control) graphicsComponent;
+		control = (VerticalPropertiesTabFolder) graphicsComponent;
 	}
 
 	/**
