@@ -26,7 +26,7 @@
 		<module>org.mule.tooling.jubula.accessibility.gef</module>
 
 		<module>org.mule.jubula.extension.rcp.aut</module>
-		<module>org.mule.tooling.jubula.extensions</module>
+		<module>org.mule.tooling.jubula.extensions.toolkit</module>
 		<module>org.mule.tooling.jubula.extensions.feature</module>
 
 		<module>org.mule.tooling.jubula.extensions.repository</module>

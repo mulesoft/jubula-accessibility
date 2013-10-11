@@ -9,6 +9,6 @@
 		<version>3.4.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>org.mule.tooling.jubula.extensions</artifactId>
+	<artifactId>org.mule.tooling.jubula.extensions.toolkit</artifactId>
 	<packaging>eclipse-plugin</packaging>
 </project>
