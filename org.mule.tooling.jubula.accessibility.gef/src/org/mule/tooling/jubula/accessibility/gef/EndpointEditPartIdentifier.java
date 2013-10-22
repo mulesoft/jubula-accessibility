@@ -2,18 +2,19 @@ package org.mule.tooling.jubula.accessibility.gef;
 
 import org.mule.tooling.messageflow.editpart.EndpointEditPart;
 
-public class EndpointEditPartIdentifier extends EntityEditPartIdentifier {
+public class EndpointEditPartIdentifier extends EntityEditPartIdentifier<EndpointEditPart> {
 
-	private EndpointEditPart editPart;
-
-	public EndpointEditPartIdentifier(Object adaptable) {
-		super(adaptable);
-		editPart = (EndpointEditPart) adaptable;
+	
+	
+	
+	public EndpointEditPartIdentifier(EndpointEditPart editPart) {
+		super(editPart);
+		
 	}
 
 	@Override
 	public String getIdentifier() {
-		return editPart.getEntity().getName();
+		return getEditPart().getEntity().getName();
 	}
 
 }

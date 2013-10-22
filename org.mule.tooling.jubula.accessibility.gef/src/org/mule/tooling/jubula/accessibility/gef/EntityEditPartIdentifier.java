@@ -7,13 +7,23 @@ import org.eclipse.jubula.rc.rcp.gef.identifier.IEditPartIdentifier;
 import org.mule.tooling.messageflow.editpart.EntityEditPart;
 import org.mule.tooling.model.messageflow.MessageFlowEntity;
 
-public class EntityEditPartIdentifier implements IEditPartIdentifier {
+public class EntityEditPartIdentifier<T extends EntityEditPart<? extends MessageFlowEntity>> implements IEditPartIdentifier {
 
-	private EntityEditPart<MessageFlowEntity> entityEditPart;
+	private T editPart;
+	
+	
 
-	@SuppressWarnings("unchecked")
-	public EntityEditPartIdentifier(Object editPart) {
-		this.entityEditPart = (EntityEditPart<MessageFlowEntity>) editPart;
+	public EntityEditPartIdentifier(T editPart) {
+		super();
+		this.editPart = editPart;
+	}
+
+	public void setEditPart(T editPart) {
+		this.editPart = editPart;
+	}
+
+	public T getEditPart() {
+		return editPart;
 	}
 
 	/**
@@ -31,6 +41,6 @@ public class EntityEditPartIdentifier implements IEditPartIdentifier {
 	 */
 	@Override
 	public String getIdentifier() {
-		return this.entityEditPart.getClass().getSimpleName();
+		return this.editPart.getClass().getSimpleName();
 	}
 }
