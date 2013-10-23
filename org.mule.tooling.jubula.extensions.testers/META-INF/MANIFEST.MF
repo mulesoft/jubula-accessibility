@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Jubula Tester Classes
 Bundle-Vendor: MuleSoft Inc.
 Bundle-SymbolicName: org.mule.tooling.jubula.extensions.testers
-Bundle-Version: 3.4.1.qualifier
+Bundle-Version: 3.4.2.qualifier
 Fragment-Host: org.eclipse.jubula.rc.rcp
 Require-Bundle: org.eclipse.ui,
  org.mule.tooling.ui.widgets,

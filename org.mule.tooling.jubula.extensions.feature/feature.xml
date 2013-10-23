@@ -2,7 +2,7 @@
 <feature
       id="org.mule.tooling.jubula.extensions.feature"
       label="Jubula Extensions Feature"
-      version="3.4.1.qualifier"
+      version="3.4.2.qualifier"
       provider-name="MuleSoft Inc.">
 
    <description url="http://www.example.com/description">
