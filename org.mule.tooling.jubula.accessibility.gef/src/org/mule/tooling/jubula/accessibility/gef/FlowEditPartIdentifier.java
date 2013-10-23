@@ -5,12 +5,9 @@ import org.mule.tooling.model.messageflow.Flow;
 import org.mule.tooling.model.messageflow.decorator.EntityDecorator;
 
 public class FlowEditPartIdentifier extends EntityEditPartIdentifier<FlowEditPart> {
-
-	
 	
 	public FlowEditPartIdentifier(FlowEditPart editPart) {
 		super(editPart);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

@@ -10,8 +10,6 @@ import org.mule.tooling.model.messageflow.MessageFlowEntity;
 public class EntityEditPartIdentifier<T extends EntityEditPart<? extends MessageFlowEntity>> implements IEditPartIdentifier {
 
 	private T editPart;
-	
-	
 
 	public EntityEditPartIdentifier(T editPart) {
 		super();
