@@ -7,7 +7,7 @@
             adaptableType="org.mule.tooling.messageflow.editpart.EntityEditPart"
             class="org.mule.tooling.jubula.accessibility.gef.MessageFlowAdapterFactory">
          <adapter
-               type="org.eclipse.jubula.rc.rcp.gef.identifier.IEditPartIdentifier">
+               type="org.eclipse.jubula.rc.rcp.e3.gef.identifier.IEditPartIdentifier">
          </adapter>
       </factory>
    </extension>

@@ -1,7 +1,7 @@
 package org.mule.tooling.jubula.accessibility.gef;
 
 import org.eclipse.core.runtime.IAdapterFactory;
-import org.eclipse.jubula.rc.rcp.gef.identifier.IEditPartIdentifier;
+import org.eclipse.jubula.rc.rcp.e3.gef.identifier.IEditPartIdentifier;
 import org.mule.tooling.messageflow.editpart.EndpointEditPart;
 import org.mule.tooling.messageflow.editpart.EntityEditPart;
 import org.mule.tooling.messageflow.editpart.FlowEditPart;

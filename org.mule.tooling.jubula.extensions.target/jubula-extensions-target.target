@@ -5,12 +5,19 @@
 <unit id="org.mule.tooling.feature.group" version="0.0.0"/>
 <unit id="org.mule.tooling.ui.widgets" version="0.0.0"/>
 <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
-<repository location="http://studio-nightly-update.s3.amazonaws.com"/>
+<repository location="http://studio-nightly-update.s3.amazonaws.com/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jubula.rc.rcp" version="1.2.2.201209040912"/>
-<unit id="org.eclipse.jubula.toolkit.common" version="1.2.2.201209040912"/>
-<repository location="http://download.eclipse.org/releases/juno/201303010900"/>
+<unit id="org.eclipse.jubula.rc.rcp.e3" version="0.0.0"/>
+<repository location="http://mulesoft-jubula.s3.amazonaws.com/7.2/extension-toolkit-rc/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.jubula.tools" version="0.0.0"/>
+<unit id="org.eclipse.jubula.rc.common" version="0.0.0"/>
+<unit id="org.eclipse.jubula.rc.rcp" version="0.0.0"/>
+<unit id="org.eclipse.jubula.rc.swt" version="0.0.0"/>
+<unit id="org.eclipse.jubula.toolkit.common" version="0.0.0"/>
+<repository location="http://download.eclipse.org/releases/kepler/201309270900/"/>
 </location>
 </locations>
 </target>

@@ -3,7 +3,7 @@ package org.mule.tooling.jubula.accessibility.gef;
 import java.util.Collections;
 import java.util.Map;
 
-import org.eclipse.jubula.rc.rcp.gef.identifier.IEditPartIdentifier;
+import org.eclipse.jubula.rc.rcp.e3.gef.identifier.IEditPartIdentifier;
 import org.mule.tooling.messageflow.editpart.EntityEditPart;
 import org.mule.tooling.model.messageflow.MessageFlowEntity;
 

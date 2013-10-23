@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.eclipse.jubula.rc.common.exception.ComponentNotFoundException;
 import org.eclipse.jubula.rc.common.exception.StepExecutionException;
-import org.eclipse.swt.widgets.Control;
+import org.eclipse.jubula.rc.common.tester.WidgetTester;
 import org.eclipse.swt.widgets.Display;
 import org.mule.tooling.messageflow.dialog.IItem;
 import org.mule.tooling.properties.widget.VerticalPropertiesTabFolder;
 
-public class VerticalPropertiesTabTester extends AbstractControlImplClass {
+public class VerticalPropertiesTabTester extends WidgetTester {
 
 	public void selectTab(final String tabName) throws StepExecutionException {
 		Display currentDisplay = Display.getCurrent();
@@ -25,7 +25,8 @@ public class VerticalPropertiesTabTester extends AbstractControlImplClass {
 	}
 
 	private void doSelectTab(String tabName) {
-		List<IItem> items = Arrays.asList(control.getItems());
+		VerticalPropertiesTabFolder propertiesTab = getPropertiesTab();
+		List<IItem> items = Arrays.asList(propertiesTab.getItems());
 		IItem targetItem = null;
 		for (IItem item : items) {
 			if (tabName.equals(item.getText())) {
@@ -34,39 +35,14 @@ public class VerticalPropertiesTabTester extends AbstractControlImplClass {
 			}
 		}
 		if (targetItem != null) {
-			control.setSelection(items.indexOf(targetItem));
+			propertiesTab.setSelection(items.indexOf(targetItem));
 		} else {
 			throw new StepExecutionException(new ComponentNotFoundException("Tab with name " + tabName + " not found", null));
 		}
 	}
 
-	// copied from SimpleExtendedComponentImplClass
-
-	/** the tested component */
-	private VerticalPropertiesTabFolder control;
-
-	/**
-	 * 
-	 * {@inheritDoc}
-	 */
-	public void setComponent(Object graphicsComponent) {
-		control = (VerticalPropertiesTabFolder) graphicsComponent;
-	}
-
-	/**
-	 * 
-	 * {@inheritDoc}
-	 */
-	public String[] getTextArrayFromComponent() {
-		return null;
-	}
-
-	/**
-	 * 
-	 * {@inheritDoc}
-	 */
-	public Control getComponent() {
-		return control;
+	private VerticalPropertiesTabFolder getPropertiesTab() {
+		return (VerticalPropertiesTabFolder) getRealComponent();
 	}
 
 }

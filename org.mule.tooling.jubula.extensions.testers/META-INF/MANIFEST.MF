@@ -8,4 +8,7 @@ Fragment-Host: org.eclipse.jubula.rc.rcp
 Require-Bundle: org.eclipse.ui,
  org.mule.tooling.ui.widgets,
  org.mule.tooling.properties,
- org.mule.tooling.messageflow
+ org.mule.tooling.messageflow,
+ org.eclipse.jubula.rc.common,
+ org.eclipse.jubula.rc.swt,
+ org.eclipse.jubula.tools
