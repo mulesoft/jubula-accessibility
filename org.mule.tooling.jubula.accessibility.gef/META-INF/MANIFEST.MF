@@ -6,12 +6,9 @@ Bundle-Version: 3.4.2.qualifier
 Bundle-Activator: org.mule.tooling.jubula.accessibility.gef.Activator
 Bundle-Vendor: MuleSoft Inc.
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.jubula.rc.rcp,
  org.mule.tooling.messageflow,
  org.eclipse.gef,
  org.mule.tooling.model,
- org.eclipse.jubula.rc.rcp.e3;bundle-version="2.2.0"
+ org.eclipse.jubula.rc.rcp.e3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: lib/org.eclipse.jubula.rc.rcp.e3_2.2.0.201310100933.jar,
- .
