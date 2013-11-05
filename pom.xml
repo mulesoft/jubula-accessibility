@@ -76,14 +76,14 @@
 
 	<distributionManagement>
 		<repository>
-			<id>mule-ee-releases</id>
+			<id>ci-releases</id>
 			<name>MuleEE Releases Repository</name>
-			<url>http://dev.ee.mulesource.com/repository/content/repositories/releases/</url>
+			<url>https://repository-master.mulesoft.org/nexus/content/repositories/ci-releases</url>
 		</repository>
 		<snapshotRepository>
-			<id>mule-ee-snapshots</id>
+			<id>ci-snapshots</id>
 			<name>MuleEE Snapshots Repository</name>
-			<url>http://dev.ee.mulesource.com/repository/content/repositories/snapshots/</url>
+			<url>https://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
