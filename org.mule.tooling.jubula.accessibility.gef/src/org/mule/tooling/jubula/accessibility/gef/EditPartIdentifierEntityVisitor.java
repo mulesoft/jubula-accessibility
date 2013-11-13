@@ -5,6 +5,9 @@ import org.mule.tooling.messageflow.editpart.EntityEditPart;
 import org.mule.tooling.messageflow.editpart.FlowEditPart;
 import org.mule.tooling.messageflow.editpart.PatternEditPart;
 import org.mule.tooling.messageflow.editpart.SplitterEditPart;
+import org.mule.tooling.messageflow.editpart.ContainerEditPart;
+import org.mule.tooling.messageflow.editpart.NestedContainerEditPart;
+import org.mule.tooling.messageflow.editpart.ScopeEditPart;
 import org.mule.tooling.model.messageflow.Compartment;
 import org.mule.tooling.model.messageflow.CompartmentLane;
 import org.mule.tooling.model.messageflow.Container;
@@ -52,7 +55,7 @@ final class EditPartIdentifierEntityVisitor implements MessageFlowEntityVisitor 
 
 	@Override
 	public void visitScopeNode(ScopeNode arg0) {
-		// TODO Auto-generated method stub
+		identifier = new ScopeEditPartIdentifier((ScopeEditPart) editPart);
 
 	}
 
@@ -69,7 +72,7 @@ final class EditPartIdentifierEntityVisitor implements MessageFlowEntityVisitor 
 
 	@Override
 	public void visitNestedContainer(NestedContainer arg0) {
-		// TODO Auto-generated method stub
+		identifier = new NestedEditPartIdentifier((NestedContainerEditPart) editPart);
 
 	}
 
@@ -109,7 +112,7 @@ final class EditPartIdentifierEntityVisitor implements MessageFlowEntityVisitor 
 
 	@Override
 	public void visitContainer(Container arg0) {
-		// TODO Auto-generated method stub
+		identifier = new ContainerEditPartIdentifier((ContainerEditPart) editPart);
 
 	}
 
